@@ -5,17 +5,27 @@ from tkinter import *
 
 data = ""
 def get_data(value):
+    """
+    Retrive the string into one variable;
+    """
     global data
 
     data = data+str(value)
     var.set(data)
 
 def clear():
+    """
+    If C button pressed evalute the result the entry box to 0
+    """
     global data
     data=""
     var.set("0")
 
 def equal_data():
+    """
+    Condition applied : Not to divide by 0 and to reflect on the GUI 
+    and to evalute the calculation using the eval function
+    """
     global data 
     try:
         total = str(eval(data))
@@ -26,6 +36,9 @@ def equal_data():
 
 
 def center_allocation(width,height):
+    """
+    Allocation the window screen to appear at the center on the window
+    """
     sys_width = win.winfo_screenwidth()
     sys_height = win.winfo_screenheight()
 
